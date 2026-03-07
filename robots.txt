@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://astitva.gsfn.in/sitemap.xml
+
+
+
+
