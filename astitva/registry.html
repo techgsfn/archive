@@ -108,4 +108,25 @@ document.getElementById("registrySearch")
 });
 
 </script>
+<script>
+
+document.getElementById("domainFilter")
+.addEventListener("change", function(){
+
+  let selected = this.value;
+
+  if(selected === "all"){
+    renderTable(registryData);
+    return;
+  }
+
+  let filtered = registryData.filter(item =>
+    item.domain === selected
+  );
+
+  renderTable(filtered);
+
+});
+
+</script>
 </body>
