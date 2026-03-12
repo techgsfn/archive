@@ -85,4 +85,27 @@ function renderTable(data){
 }
 
 </script>
+<script>
+
+document.getElementById("registrySearch")
+.addEventListener("keyup", function() {
+
+  let query = this.value.toLowerCase();
+
+  let filtered = registryData.filter(item =>
+
+      item.identifier.toLowerCase().includes(query) ||
+      item.citation.toLowerCase().includes(query) ||
+      item.title.toLowerCase().includes(query) ||
+      item.type.toLowerCase().includes(query) ||
+      item.collection.toLowerCase().includes(query) ||
+      item.domain.toLowerCase().includes(query)
+
+  );
+
+  renderTable(filtered);
+
+});
+
+</script>
 </body>
